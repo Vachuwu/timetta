@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "f46baa5e-505a-4793-a35d-a24f765370b5",
+		"name": "timetta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27388668"
+	},
+	"item": [
+		{
+			"name": "core",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/worklogs"
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": 1,\n  \"workDate\": \"2024-03-28\",\n  \"startTime\": \"2024-03-28T09:00:00\",\n  \"endTime\": \"2024-03-28T11:00:00\",\n  \"taskType\": \"Встреча\",\n  \"description\": \"Совещание по проекту\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/worklogs"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/worklogs/2"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"userId\": 2,\n        \"workDate\": \"2025-01-02\",\n        \"startTime\": \"2025-01-02T10:00:00\",\n        \"endTime\": \"2025-01-02T19:00:00\",\n        \"taskType\": \"Документация\",\n        \"description\": \"Техническая спецификация\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/worklogs/3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "gateway",
+			"item": [
+				{
+					"name": "get all Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/worklogs"
+					},
+					"response": []
+				},
+				{
+					"name": "create Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": 1,\n  \"workDate\": \"2024-03-28\",\n  \"startTime\": \"2024-03-28T09:00:00\",\n  \"endTime\": \"2024-03-28T11:00:00\",\n  \"taskType\": \"Встреча\",\n  \"description\": \"Совещание по проекту\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/worklogs"
+					},
+					"response": []
+				},
+				{
+					"name": "delete Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/worklogs/2"
+					},
+					"response": []
+				},
+				{
+					"name": "update Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": 3,\n        \"userId\": 2,\n        \"workDate\": \"2025-01-02\",\n        \"startTime\": \"2025-01-02T10:00:00\",\n        \"endTime\": \"2025-01-02T19:00:00\",\n        \"taskType\": \"Документация\",\n        \"description\": \"Техническая спецификация\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/worklogs/3"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
