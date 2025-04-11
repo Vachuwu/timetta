@@ -1,0 +1,6 @@
+server:
+  port: 8081
+
+core:
+  service:
+    base-url: http://core-service:8080/api/

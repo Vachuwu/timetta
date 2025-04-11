@@ -1,24 +1,78 @@
-# Compiled class file
+# Общие игнорируемые файлы для Java проектов
 *.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
 *.jar
 *.war
-*.nar
 *.ear
+*.log
+*.nar
 *.zip
 *.tar.gz
-*.rar
+*.swp
+*.iml
+*.ipr
+*.iws
+*.bak
+*.tmp
+*.orig
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# Логи и дампы
+logs/
+*.log
+*.log.*
+*.pid
+*.hprof
+*.dump
+
+# Директории сборки и зависимостей
+target/
+build/
+out/
+bin/
+.gradle/
+.mvn/
+dependency-reduced-pom.xml
+
+# Идеи и настройки IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+.factorypath
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Kubernetes
+**/k8s/
+**/kubernetes/
+**/*.kubeconfig
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+
+
+# Maven и Gradle
+.mvn/wrapper/maven-wrapper.jar
+gradle-wrapper.jar
+gradlew
+gradlew.bat
+
+# Прочие
+**/.cache/
+**/.next/
+**/.nuxt/
+**/.sass-cache/
+**/.serverless/
+**/.fusebox/
+**/.dynamodb/
+**/.elasticbeanstalk/
+**/.quasar/
+**/.vuepress/dist
