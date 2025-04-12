@@ -25,24 +25,8 @@ clean: down
 
 # Запуск тестов Core Service (требует запущенной БД)
 test-core:
-	cd core-service && mvn test
+	cd core-service && mvn test -Dmaven.test.skip=false
 
-# Запуск тестов API Gateway
-test-gateway:
-	cd api-gateway && mvn test
-
-# Перезапуск конкретного сервиса (пример: make restart-service SERVICE=core-service)
-restart-service:
-	docker-compose stop $(SERVICE)
-	docker-compose rm -f $(SERVICE)
-	docker-compose up -d --no-deps --build $(SERVICE)
-
-# Проверка здоровья сервисов
-health:
-	@echo "Core Service health:"
-	@curl -s http://localhost:8080/actuator/health | jq
-	@echo "\nAPI Gateway health:"
-	@curl -s http://localhost:8081/actuator/health | jq
 
 # Список всех команд
 help:
@@ -53,6 +37,3 @@ help:
 	@echo "  make logs       - Просмотр логов"
 	@echo "  make clean      - Полная очистка Docker"
 	@echo "  make test-core  - Запуск тестов Core Service"
-	@echo "  make test-gateway - Запуск тестов API Gateway"
-	@echo "  make health     - Проверка здоровья сервисов"
-	@echo "  make restart-service SERVICE=<name> - Перезапуск конкретного сервиса"
